@@ -308,7 +308,7 @@ function renderProducts() {
       <div class="product-card" data-id="${p.id}" id="card-${p.id}">
         <div class="card-img-container" data-action="detail" data-id="${p.id}">
           <img src="${p.image}" alt="${p.name}" class="card-img" loading="lazy">
-          <span class="card-pill-tag">${p.badge || (p.category === 'books' ? 'Like New' : 'Fresh Daily')}</span>
+         
         </div>
 
         <div class="card-body">
