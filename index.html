@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLINONE | MBBS Medical Textbooks & Gym Nutrition</title>
+  <meta name="description" content="ALLINONE - Direct student store for 2nd-Year MBBS Medical Textbooks (₹1200 each, 3 for ₹3000) and fresh Gym Protein Bowls. Instant WhatsApp checkout.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="app-header" id="app-header">
+    <div class="header-inner">
+      <div class="logo-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </div>
+      <!-- Brand Logo / Identity -->
+      <div class="brand-group">
+        <a href="#" class="brand-logo" id="store-logo">
+          
+          <div class="brand-titles">
+            <span class="brand-name">ALLINONE</span>
+            <span class="brand-status">
+              <span class="status-dot"></span> Direct Student Store
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Quick Search Input (Airbnb style) -->
+      <div class="search-wrapper">
+        <div class="search-input-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="catalog-search-input" placeholder="Search books, salads, protein boxes..." aria-label="Search catalog">
+          <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear search" style="display: none;">&times;</button>
+        </div>
+      </div>
+
+      <!-- Header Right: Quick Cart Trigger -->
+      <div class="header-actions">
+        <button type="button" class="cart-trigger-btn" id="open-cart-btn" aria-label="Open Shopping Cart">
+          <div class="cart-icon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge-count" id="cart-counter">0</span>
+          </div>
+          <span class="cart-btn-label">Cart</span>
+          <span class="cart-btn-price" id="cart-header-total">₹0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Sticky Airbnb-Style Category Filter Bar -->
+  <nav class="categories-bar-wrapper" id="categories-bar">
+    <div class="categories-container">
+      <div class="categories-scroll" id="categories-tabs">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Storefront Body (Direct /Buy Experience) -->
+  <main class="store-main">
+    <div class="store-container">
+
+      <!-- Auto-Scrolling Visual Hero Banner Carousel -->
+      <div class="hero-carousel-wrapper" id="hero-carousel">
+        <div class="hero-carousel-track" id="hero-carousel-track">
+          
+          <!-- Slide 1: MBBS Books Bundle Deal -->
+          <div class="hero-slide active" data-index="0">
+            <div class="hero-slide-bg" style="background-image: url('images/bundle.jpg');"></div>
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+              <span class="hero-slide-badge">📚 SPECIAL COMBO DEAL</span>
+              <h2 class="hero-slide-title">2nd-Year MBBS Books for ₹3,000</h2>
+              <p class="hero-slide-desc">Grab KD Tripathi, Apurba Sastry & Robbins Pathology · Save ₹600 + Free Pathology at a Glance</p>
+              <div class="hero-slide-actions">
+               
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Gym Nutrition & Meal Prep -->
+          <div class="hero-slide" data-index="1">
+            <div class="hero-slide-bg" style="background-image: url('images/gym_banner.jpg');"></div>
+            <div class="hero-slide-overlay"></div>
+            <div class="hero-slide-content">
+              <span class="hero-slide-badge gym-badge">🥗 DAILY GYM MEAL PREP</span>
+              <h2 class="hero-slide-title">High-Protein Fitness Bowls</h2>
+              <p class="hero-slide-desc">Boiled eggs, grilled paneer salads & fresh energy bowls prepped daily from ₹149</p>
+              
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Arrows -->
+        <button type="button" class="carousel-arrow prev" id="carousel-prev-btn" aria-label="Previous Slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button type="button" class="carousel-arrow next" id="carousel-next-btn" aria-label="Next Slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Slider Dots Navigation -->
+        <div class="carousel-dots" id="carousel-dots">
+          <button type="button" class="carousel-dot active" data-index="0" aria-label="Go to Slide 1"></button>
+          <button type="button" class="carousel-dot" data-index="1" aria-label="Go to Slide 2"></button>
+        </div>
+      </div>
+
+      <!-- Active Filter / Results Status Bar -->
+      <div class="catalog-status-bar">
+        <div class="status-left">
+          <h1 class="catalog-heading" id="current-category-title">All Products</h1>
+          <span class="catalog-count-pill" id="items-count-display">8 items available</span>
+        </div>
+        <div class="status-right" id="filter-reset-wrap" style="display: none;">
+          <button type="button" class="btn-clear-filter" id="reset-filter-btn">
+            Clear filter
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Catalog Grid -->
+      <div class="products-grid" id="products-catalog-grid">
+        <!-- Dynamically rendered by script.js -->
+      </div>
+
+      <!-- Empty State View -->
+      <div class="empty-results-state" id="empty-state" style="display: none;">
+        <div class="empty-icon-circle">🔍</div>
+        <h3>No items found</h3>
+        <p>No products matched your search. Try adjusting keywords or category filters.</p>
+        <button type="button" class="btn-reset-search" id="empty-reset-btn">View All Products</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Sticky Mobile Cart Bar (Appears when items are in cart) -->
+  <div class="mobile-cart-bottombar" id="mobile-cart-bottombar" style="display: none;">
+    <div class="mobile-cart-inner">
+      <div class="mobile-cart-summary">
+        <div class="mobile-cart-count" id="mobile-cart-count-pill">0 items</div>
+        <div class="mobile-cart-total" id="mobile-cart-total-display">₹0</div>
+      </div>
+      <button type="button" class="btn-mobile-view-cart" id="mobile-open-cart-btn">
+        <span>View Cart</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Slide-Over Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-drawer-title" aria-modal="true" role="dialog">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <h2 id="cart-drawer-title" class="drawer-title">Your Order</h2>
+        <span class="drawer-items-pill" id="drawer-items-count">0 items</span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="close-cart-btn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Bundle Savings Notification in Cart -->
+    <div class="cart-deal-alert" id="cart-bundle-alert" style="display: none;">
+      <span class="alert-emoji">🎉</span>
+      <div class="alert-content">
+        <strong>3-Book Set Combo Applied!</strong>
+        <span>₹600 discount unlocked (3 books for ₹3,000)</span>
+      </div>
+    </div>
+
+    <!-- Scrollable Items List in Cart -->
+    <div class="drawer-items-list" id="drawer-items-list">
+      <!-- Items dynamically populated by script.js -->
+    </div>
+
+    <!-- Empty Cart Template Inside Drawer -->
+    <div class="cart-empty-view" id="cart-empty-view">
+      <div class="empty-cart-graphic">🛒</div>
+      <h4>Your cart is empty</h4>
+      <p>Select any MBBS book or gym protein bowl to start your order.</p>
+    </div>
+
+    <!-- Cart Footer with Pricing & Checkout Action -->
+    <div class="drawer-footer" id="drawer-footer" style="display: none;">
+      
+      <div class="order-pricing-breakdown">
+        <div class="price-row">
+          <span>Subtotal</span>
+          <span id="drawer-subtotal">₹0</span>
+        </div>
+        <div class="price-row discount-row" id="drawer-discount-row" style="display: none;">
+          <span>Combo Deal Discount</span>
+          <span class="discount-val" id="drawer-discount">-₹600</span>
+        </div>
+        <div class="price-row final-total-row">
+          <span>Total Payable</span>
+          <span class="final-total" id="drawer-total">₹0</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-checkout-proceed" id="proceed-checkout-btn">
+        <span>Proceed to Checkout</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+
+      <div class="drawer-security-note">
+        🔒 Directly sends your order to WhatsApp • Fast Confirmation
+      </div>
+    </div>
+  </aside>
+
+  <!-- Quick Checkout Modal (Name, Phone & WhatsApp Dispatch) -->
+  <div class="modal-backdrop" id="checkout-modal-backdrop"></div>
+  <div class="checkout-modal" id="checkout-modal" role="dialog" aria-labelledby="checkout-modal-title" aria-modal="true">
+    <div class="modal-header">
+      <div class="modal-title-wrap">
+        <h3 id="checkout-modal-title" class="modal-title">Complete Your Order</h3>
+        <p class="modal-subtitle">Enter your name to confirm order on WhatsApp</p>
+      </div>
+      <button type="button" class="modal-close-btn" id="close-checkout-modal-btn" aria-label="Close checkout">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <form class="checkout-form" id="checkout-order-form">
+      
+      <!-- Order Items Quick Summary Badge -->
+      <div class="modal-order-summary-box">
+        <div class="summary-top">
+          <span class="summary-label">Order Total</span>
+          <span class="summary-price" id="modal-summary-total">₹0</span>
+        </div>
+        <div class="summary-items-preview" id="modal-summary-items-list">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+
+      <!-- Inputs: Only Customer Name -->
+      <div class="form-group">
+        <label for="customer-name" class="form-label">
+          Your Name <span class="required-star">*</span>
+        </label>
+        <div class="input-with-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <input type="text" id="customer-name" name="name" placeholder="Enter your name" required autocomplete="name">
+        </div>
+      </div>
+
+      <!-- WhatsApp Submit Button -->
+      <div class="modal-actions">
+        <button type="submit" class="btn-send-whatsapp" id="submit-whatsapp-order-btn">
+          <svg class="wa-icon-large" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.301-.15-1.782-.88-2.058-.98-.276-.1-.477-.15-.678.15-.2.301-.778.98-.954 1.18-.176.2-.352.226-.653.075-.301-.15-1.272-.469-2.423-1.496-.895-.798-1.5-1.784-1.676-2.085-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.176.2-.301.301-.502.101-.2.05-.376-.025-.527-.075-.15-.678-1.632-.929-2.235-.245-.588-.494-.508-.678-.518l-.578-.01c-.2 0-.527.075-.803.376s-1.054 1.03-1.054 2.511 1.079 2.912 1.23 3.113c.15.2 2.123 3.242 5.143 4.547.718.311 1.279.497 1.716.636.722.23 1.379.197 1.898.12.578-.087 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.431-.075-.126-.276-.201-.577-.352zM12 2a9.93 9.93 0 0 0-8.528 15.111L2 22l4.985-1.307A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+          </svg>
+          <span>Send Order on WhatsApp</span>
+        </button>
+
+        <button type="button" class="btn-copy-order" id="copy-order-text-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Order Details</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Product Quick Detail Inspection Modal -->
+  <div class="modal-backdrop" id="detail-modal-backdrop"></div>
+  <div class="detail-modal" id="detail-modal" role="dialog" aria-labelledby="detail-title" aria-modal="true">
+    <button type="button" class="modal-close-btn" id="close-detail-modal-btn" aria-label="Close product details">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <div class="detail-modal-body">
+      <div class="detail-img-col">
+        <img src="" alt="" id="detail-img" class="detail-main-img">
+        <div class="detail-badge-pill" id="detail-badge">Like New</div>
+      </div>
+      
+      <div class="detail-info-col">
+        <span class="detail-category-tag" id="detail-category">Category</span>
+        <h3 class="detail-title" id="detail-title">Product Title</h3>
+        <p class="detail-subtitle" id="detail-subtitle">Subtitle</p>
+
+        <div class="detail-price-box">
+          <div class="price-figures">
+            <span class="detail-current-price" id="detail-price">₹0</span>
+            <span class="detail-mrp-price" id="detail-mrp">MRP ₹0</span>
+            <span class="detail-save-badge" id="detail-save-badge">50% OFF</span>
+          </div>
+          <div class="detail-bundle-hint" id="detail-bundle-hint">
+            Part of 3-Book Set for ₹3,000 Deal!
+          </div>
+        </div>
+
+        <p class="detail-desc" id="detail-desc"></p>
+
+        <div class="detail-highlights-wrap">
+          <h5>Highlights & Details:</h5>
+          <ul class="detail-highlights-list" id="detail-highlights-list"></ul>
+        </div>
+
+        <div class="detail-actions">
+          <div class="detail-stepper-wrap" id="detail-stepper-container">
+            <!-- Populated dynamically: Add button or Stepper -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Application Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
