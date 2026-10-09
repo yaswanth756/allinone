@@ -154,7 +154,7 @@ const CATEGORIES = [
 ];
 
 // ─── WHATSAPP CONFIG ────────────────────────────────────────────────────────
-const WHATSAPP_NUMBER = "919876543210"; // Change to your actual number
+const WHATSAPP_NUMBER = "919701122034";
 const BOOK_BUNDLE_THRESHOLD = 3;
 const BOOK_BUNDLE_PRICE = 3000;
 const BOOK_INDIVIDUAL_PRICE = 1200;
